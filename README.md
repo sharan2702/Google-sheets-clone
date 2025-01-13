@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Google Sheets Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### **Overview**
+This project is a web application that mimics the core functionalities and UI of **Google Sheets**, offering mathematical and data quality functions, data entry, basic formatting, and chart generation.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### **Features**
 
-### `npm start`
+#### 1. **Spreadsheet Interface**
+- Google Sheets-like UI with a toolbar, formula bar, and grid layout.
+- **Cell Dependencies**: Automatically update formulas when related cells change.
+- **Basic Formatting**: Supports bold, italics, font size.
+- **Row/Column Management**: Add rows/columns.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 2. **Mathematical Functions**
+- `=SUM(A1:A3)` - Adds values in A1 to A3.
+- `=AVERAGE(B1:B5)` - Averages values in B1 to B5.
+- `=MAX(C1:C10)` - Returns the max value from C1 to C10.
+- `=MIN(D1:D5)` - Returns the min value from D1 to D5.
+- `=COUNT(E1:E10)` - Counts numeric values in E1 to E10.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 3. **Data Quality Functions**
+- **TRIM**: Removes extra spaces (e.g., `"  Hello  "` → `"Hello"`).
+- **UPPER**: Converts text to uppercase (e.g., `hello` → `HELLO`).
+- **LOWER**: Converts text to lowercase (e.g., `WORLD` → `world`).
+- **REMOVE_DUPLICATES**: Removes duplicate rows from a range.
+- **FIND_AND_REPLACE**: Finds and replaces text (e.g., `Apple` → `Orange`).
 
-### `npm test`
+#### 4. **Chart Generation**
+- Generate **Bar**, **Pie**, **Line**, and **Doughnut** charts.  
+  Example: Input data in `A1:B5`, select a chart type, and click **Generate Chart**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 5. **Save and Load**
+- Save spreadsheets to a file.
+- Load previously saved spreadsheets for editing.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Usage Instructions**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### **Formulas**
+1. Select a cell for the formula result.
+2. Enter a formula in the formula bar (e.g., `=SUM(A1:A3)`).
+3. Press **Enter** to see the result.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### **Data Quality Functions**
+1. Select a range (e.g., `A1:A5`).
+2. Click the desired function (e.g., **TRIM**, **UPPER**).
+3. The selected cells will update accordingly.
 
-### `npm run eject`
+#### **Charts**
+1. Enter data in a range (e.g., `A1:B5`).
+2. Choose a chart type and click **Generate Chart**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### **Save and Load**
+- **Save**: Download the current spreadsheet.
+- **Load**: Upload a previously saved spreadsheet.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Tech Stack**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Frontend**: React.js, Tailwind CSS
+- **Libraries**: Redux Toolkit, Chart.js, react-chartjs-2, FileSaver.js
+- **Backend**: None (fully client-side)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Examples**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Formulas**: 
+  - `=SUM(A1:A3)` → Adds values in A1 to A3.
+  - `=AVERAGE(B1:B5)` → Averages values in B1 to B5.
+- **Data Quality**: 
+  - **TRIM**: `"  Hello  "` → `"Hello"`.
+  - **UPPER**: `"hello"` → `"HELLO"`.
+- **Charts**: 
+  - Bar chart for sales data (`A1:B5`): 
+    - A1: `Month`, B1: `Sales`
+    - A2: `Jan`, B2: `100`
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **How to Run the Project**
 
-### Analyzing the Bundle Size
+# How to Run the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Clone the Repository
+Open a terminal and run the following commands to clone the repository and navigate into the project folder:
 
-### Making a Progressive Web App
+```bash
+git clone <your-repo-url>
+cd google-sheets-clone
+```
+## Install Dependencies
+Install all required dependencies by running:
+```bash
+npm install
+```
+## Start the Development Server
+Run the following command to start the development server:
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
