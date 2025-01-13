@@ -90,7 +90,7 @@ This project is a web application that mimics the core functionalities and UI of
 Open a terminal and run the following commands to clone the repository and navigate into the project folder:
 
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd google-sheets-clone
 ```
 ## Install Dependencies
@@ -104,3 +104,5 @@ Run the following command to start the development server:
 npm start
 ```
 
+### Sample
+<img width="1343" alt="Screenshot 2025-01-14 at 1 28 32 AM" src="https://github.com/user-attachments/assets/dc8c5046-8f35-4bed-a15d-b4c14b4ada95" />
